@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile.txt
+    ports:
+      - "8080:3000"
+    networks:
+      - tic-tac-toe-network
+
+  frontend:
+    build: 
+      context: ./frontend
+      dockerfile: Dockerfile.txt
+    ports:
+      - "8081:80"
+    depends_on:
+      - backend
+    networks:
+      - tic-tac-toe-network
+
+networks:
+  tic-tac-toe-network:
+    driver: bridge

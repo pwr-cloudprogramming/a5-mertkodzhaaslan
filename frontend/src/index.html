@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="front-page">
+        <h1>TIC TAC TOE</h1>
+        <h3>
+            <ol>
+                <li>ENTER USER NAME OR JOIN TO YOUR FRIEND </li>
+                
+            </ol>
+        </h3>
+        <h4>Enter your username:</h4>
+        <input type="text" id="username" placeholder="Username">
+        <br><br>
+        <button id="start">START GAME</button>
+        <br><br>
+        <h4>Enter ID : </h4>
+        <input type="text" id="group" placeholder="Group ID">
+        <button id="join">JOIN</button>
+    </div>
+    <div class="board">
+        <h2 id="greeting"></h2>
+        <h3 id="turn"></h3>
+        <table>
+            <tr>
+                <td><button class="box" id="button_00"></button></td>
+                <td><button class="box" id="button_01"></button></td>
+                <td><button class="box" id="button_02"></button></td>
+            </tr>
+            <tr>
+                <td><button class="box" id="button_10"></button></td>
+                <td><button class="box" id="button_11"></button></td>
+                <td><button class="box" id="button_12"></button></td>
+            </tr>
+            <tr>
+                <td><button class="box" id="button_20"></button></td>
+                <td><button class="box" id="button_21"></button></td>
+                <td><button class="box" id="button_22"></button></td>
+            </tr>
+        </table>
+        <div class="reset">
+            <button id="reset">RESET</button>
+        </div>
+    </div>
+
+    <script src="lib/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
